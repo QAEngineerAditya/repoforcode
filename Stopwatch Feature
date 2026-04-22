@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Stopwatch {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Press ENTER to start the stopwatch...");
+        scanner.nextLine();
+        long startTime = System.currentTimeMillis();
+
+        System.out.println("Stopwatch started! Press ENTER to stop...");
+        scanner.nextLine();
+        long endTime = System.currentTimeMillis();
+
+        long elapsedTime = endTime - startTime;
+
+        System.out.println("Elapsed Time: " + elapsedTime + " milliseconds");
+        System.out.println("Elapsed Time: " + (elapsedTime / 1000.0) + " seconds");
+
+        scanner.close();
+    }
+}
